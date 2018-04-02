@@ -1,0 +1,28 @@
+LET('i', 2)
+
+// testing a comment
+REPEAT(4) {
+  PRINT(ADD('Count: ', i))
+  SET ('i', ADD(i, 2))
+}
+
+LET('myvar', 'World!')
+PRINT(ADD('Hello ', myvar))
+
+GREET('Dan')
+
+FUNCTION('test') {
+  GREET('test')
+
+  FUNCTION('GREET', 'name') {
+    PRINT(ADD(ADD('Fuck you ', name ), '!'))
+  }
+}
+
+FUNCTION('GREET', 'name') {
+  PRINT(ADD(ADD('Hello ', name), '!'))
+}
+
+test()
+GREET('Dan')
+GREET('Jeneva')

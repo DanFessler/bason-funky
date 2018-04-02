@@ -1,0 +1,20 @@
+{
+  "name": "bason-funky",
+  "version": "1.0.0",
+  "description": "A BASON Parser with javascript function-like syntax",
+  "main": "src/index.js",
+  "scripts": {
+    "demo": "node demo/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Fessler",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "bason": "^1.0.2"
+  },
+  "keywords": [
+    "bason",
+    "parser"
+  ]
+}
