@@ -1,28 +1,23 @@
-LET('i', 2)
-
-// testing a comment
-REPEAT(4) {
+// testing loops
+LET('i', 0)
+REPEAT(5) {
+  SET ('i', ADD(i, 1))
   PRINT(ADD('Count: ', i))
-  SET ('i', ADD(i, 2))
 }
 
-LET('myvar', 'World!')
-PRINT(ADD('Hello ', myvar))
+// testing function being
+// used before its declaration
+GREET('World')
+TEST()
 
-GREET('Dan')
-
-FUNCTION('test') {
-  GREET('test')
-
-  FUNCTION('GREET', 'name') {
-    PRINT(ADD(ADD('Fuck you ', name ), '!'))
+// testing local scoping
+FUNCTION('TEST') {
+  GREET()
+  FUNCTION('GREET') {
+    PRINT('This is the local GREET function')
   }
 }
 
 FUNCTION('GREET', 'name') {
   PRINT(ADD(ADD('Hello ', name), '!'))
 }
-
-test()
-GREET('Dan')
-GREET('Jeneva')
