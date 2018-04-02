@@ -16,5 +16,13 @@
   "keywords": [
     "bason",
     "parser"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanFessler/bason-funky.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DanFessler/bason-funky/issues"
+  },
+  "homepage": "https://github.com/DanFessler/bason-funky#readme"
 }
