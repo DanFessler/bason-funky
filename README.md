@@ -33,15 +33,15 @@ npm install bason-funky --save
 ~~~
 
 # Usage
-Import the package, define your program, and run it with `BASON.RUN()`
+Import the package, define your program, and parse it with `.parse()`
 ~~~javascript
 let BASON = require('bason')
 let funky = require('bason-funky')
 
 BASON.RUN(funky.parse(`
-  FUNCTION('TEST', 'name') {
+  FUNCTION GREET('name') {
     PRINT(ADD('Hello ', name))
   }
-  TEST('World!')
+  GREET('World!')
 `));
 ~~~
