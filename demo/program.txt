@@ -11,13 +11,13 @@ GREET('World')
 TEST()
 
 // testing local scoping
-FUNCTION('TEST') {
+FUNCTION TEST() {
   GREET()
-  FUNCTION('GREET') {
+  FUNCTION GREET() {
     PRINT('This is the local GREET function')
   }
 }
 
-FUNCTION('GREET', 'name') {
+FUNCTION GREET('name') {
   PRINT(ADD(ADD('Hello ', name), '!'))
 }

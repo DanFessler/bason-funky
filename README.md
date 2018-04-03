@@ -10,19 +10,19 @@ keyword (parameters, ...) {
 }
 ~~~
 
-However, unlike javascript, when declaring new functions, the name of the function is the first parameter:
+defining functions in funky is also similar to javascript:
 ~~~javascript
-FUNCTION('TEST', 'name') {
+FUNCTION GREET('name') {
   PRINT(ADD('Hello ', name))
 }
-TEST('World!')
+GREET('World!')
 ~~~
 
 Funky hoists functions for you so you can declare them anywhere in your file
 ~~~javascript
 // still works!
-TEST('World!')
-FUNCTION('TEST', 'name') {
+GREET('World!')
+FUNCTION GREET('name') {
   PRINT(ADD('Hello ', name))
 }
 ~~~

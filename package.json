@@ -1,6 +1,6 @@
 {
   "name": "bason-funky",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A BASON Parser with javascript function-like syntax",
   "main": "src/index.js",
   "scripts": {

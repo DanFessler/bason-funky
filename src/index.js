@@ -83,13 +83,24 @@ module.exports = {
           }
           // must be a key
           else {
-            line = {};
-            line[lineKey] = lineParams != null ? lineParams : null;
-            if (lineScript) line.script = lineScript;
-            line.line = lineCount;
 
-            if (lineKey == "FUNCTION") result.unshift(line);
-            else result.push(line);
+            line = {};
+
+            if (lineKey.substr(0,8) == "FUNCTION") {
+              let functionName = lineKey.split(" ")[1]; lineKey = "FUNCTION";
+              lineParams.unshift(functionName);
+
+              line[lineKey] = lineParams;
+              if (lineScript) line.script = lineScript;
+              line.line = lineCount;
+              result.unshift(line);
+            }
+            else {
+              line[lineKey] = lineParams != null ? lineParams : null;
+              if (lineScript) line.script = lineScript;
+              line.line = lineCount;
+              result.push(line);
+            }
           }
 
         }
